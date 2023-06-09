@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CC3200 Lab Project Demo</title>
+    <style>
+        .main-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+            /* border-radius: 8px; */ /*doesnt change anything*/
+        }
+
+        .main-table td {
+            padding: 20px;
+            border: 1px solid #000;
+            /* border-radius: 8px; */ /*doesnt change anything*/
+        }
+
+        section {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        section:hover {
+            background-position: center;
+            background-size: 50%;
+            transition: background-size 0.8s ease-in-out;
+            /* opacity: 0.8; */
+        }
+
+        .project-description {
+            border: 1px solid #000;
+            padding: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        .login {
+            background-image: url('stonks.png');
+            /* Additional CSS properties for background display */
+            background-repeat: no-repeat;
+            background-size: 70%, 70%;
+            background-position: center
+        }
+
+        .main-menu {
+            background-image: url('stonks.png');
+            /* Additional CSS properties for background display */
+            background-repeat: no-repeat;
+            background-size: 70%, 70%;
+            background-position: center
+        }
+
+        .tic-tac-toe {
+            background-image: url('stonks.png');
+            /* Additional CSS properties for background display */
+            background-repeat: no-repeat;
+            background-size: 70%, 70%;
+            background-position: center
+        }
+
+        .number-memory {
+            background-image: url('stonks.png');
+            /* Additional CSS properties for background display */
+            background-repeat: no-repeat;
+            background-size: 70%, 70%;
+            background-position: center
+        }
+
+        .word-memory {
+            background-image: url('stonks.png');
+            /* Additional CSS properties for background display */
+            background-repeat: no-repeat;
+            background-size: 70%, 70%;
+            background-position: center
+        }
+
+        .battleship {
+            background-image: url('stonks.png');
+            /* Additional CSS properties for background display */
+            background-repeat: no-repeat;
+            background-size: 70%, 70%;
+            background-position: center;
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+            width: 90%;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            color: #000;
+            text-align: center;
+        }
+
+        .content p {
+            color: #000;
+            font-size: 16px;
+            /* margin-top: 200px; */
+            text-align: justify;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        .youtube-video {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #000;
+            border-radius: 8px;
+            margin-left: 498px;
+            margin-right: 498px;
+        }
+
+        .youtube-video iframe {
+            border: 0;
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CC3200 Lab Project Demo</h1>
+    </header>
+
+    <section class="project-description">
+        <div class="content">
+            <h2>Project Description</h2>
+            <p>
+                This is a demo website showcasing the CC3200 Lab Project. The project involves developing various interactive games and demos using the CC3200 microcontroller. Users can navigate through the different games and enjoy the interactive experiences provided by each one.
+            </p>
+        </div>
+    </section>
+
+    <table class="main-table">
+        <tr>
+            <td>
+                <section class="login">
+                    <div class="content">
+                        <h2>Login</h2>
+                        <p>
+                            Users enter their username and password using the IR remote control with numbers. T9-style text messaging is used to input the required information.
+                        </p>
+                    </div>
+                </section>
+            </td>
+            <td>
+                <section class="main-menu">
+                    <div class="content">
+                        <h2>Main Menu</h2>
+                        <p>
+                            After successful login, the screen switches to a main menu page where users can select different games by pressing specific buttons on the remote control.
+                        </p>
+                    </div>
+                </section>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <section class="tic-tac-toe">
+                    <div class="content">
+                        <h2>Tic Tac Toe</h2>
+                        <p>
+                            Two players take turns playing Tic Tac Toe using the remote control to select the position to place Xs or Os. Button 0 is used to move to the next square, and mute (or enter) is used to place the X or O. The game determines the winner and displays the result before returning to the main menu.
+                        </p>
+                    </div>
+                </section>
+            </td>
+            <td>
+                <section class="number-memory">
+                    <div class="content">
+                        <h2>Number Memory</h2>
+                        <p>
+                            Users are shown a number on the screen and have to memorize it. Pressing the SW3 switch starts the game. The screen turns black, and users must enter the previously shown number. If the guess is correct, the game adds another number to memorize and increases the score. If the guess is incorrect, the game ends, and the score is sent through AWS, triggering an email.
+                        </p>
+                    </div>
+                </section>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <section class="word-memory">
+                    <div class="content">
+                        <h2>Word Memory</h2>
+                        <p>
+                            Similar to Number Memory, users are shown words and must remember whether they have seen them before. In addition to keeping score, users have three lives. The SW3 and SW2 switches are used to indicate new and seen words, respectively. When users run out of lives, the score is sent through AWS.
+                        </p>
+                    </div>
+                </section>
+            </td>
+            <td>
+                <section class="battleship">
+                    <div class="content">
+                        <h2>Battleship</h2>
+                        <p>
+                            Two players can play Battleship on a 4x4 grid due to the OLED display's size limitation. Each player has their own OLED display to place ships and track attacks. UART communication is used between the LaunchPads to send messages. Attacks are visually indicated with red or cyan circles on both players' displays. Once all ships are sunk, a message is sent to the opponent via UART, and the screens display unique messages based on the outcome. A message is also sent through AWS.
+                        </p>
+                    </div>
+                </section>
+            </td>
+        </tr>
+    </table>
+
+    <div class="youtube-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DMCDr3ZKi8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+        <p>CC3200 Lab Project Demo &copy; 2023</p>
+    </footer>
+</body>
+</html>
