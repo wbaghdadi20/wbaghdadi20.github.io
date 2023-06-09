@@ -8,9 +8,25 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Helvetica', Arial, sans-serif;
             margin: 0;
             padding: 0;
+        }
+
+        .main-container {
+            background-color: #FFFFFF;
+        }
+
+        .section-features {
+            background-color: #FFFFFF;
+        }
+
+        .section-games {
+            background-color: #F5F5F7;
+        }
+
+        .section-demo-video {
+            background-color: #FFFFFF;
         }
 
         header {
@@ -103,84 +119,96 @@
         <h1>CC3200 Lab Project Demo</h1>
     </header>
 
-    <div class="cards-container">
-        <div class="section-separator">
-            <h1 class="section-title">Features</h1>
-            <hr>
-        </div>
+    <div class="main-container">
+        <div class="section-features">
+            <div class="cards-container">
+                <div class="section-separator">
+                    <h1 class="section-title">Features</h1>
+                    <hr>
+                </div>
 
-        <div class="card">
-            <div class="card-image"></div>
-            <div class="card-content">
-                <h2>Login</h2>
-                <p>
-                    Use the IR remote for text/numeric input on the login page. Enter your username and password using T9-style text messaging.
-                </p>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h2>Login</h2>
+                        <p>
+                            Use the IR remote for text/numeric input on the login page. Enter your username and password using T9-style text messaging.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h2>Main Menu</h2>
+                        <p>
+                            After successful login, navigate to the main menu page. Press different buttons to select and play different games.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-image"></div>
-            <div class="card-content">
-                <h2>Main Menu</h2>
-                <p>
-                    After successful login, navigate to the main menu page. Press different buttons to select and play different games.
-                </p>
+        <div class="section-games">
+            <div class="cards-container">
+                <div class="section-separator">
+                    <h1 class="section-title">Games Implemented</h1>
+                    <hr>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h2>Tic Tac Toe</h2>
+                        <p>
+                            Play Tic Tac Toe with two players. Use the remote control to select squares on the grid and place Xs or Os. The game determines the winner or a draw, and returns to the main menu page.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h2>Number Memory</h2>
+                        <p>
+                            Memorize and enter displayed numbers. A correct guess increases the score and adds another number to memorize. An incorrect guess ends the game and sends the score through AWS.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h2>Word Memory</h2>
+                        <p>
+                            Remember whether you have seen a word before. Keep score and lives. Use the SW3 and SW2 switches to indicate new and seen words. Once lives run out, the score is sent through AWS.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h2>Battleship</h2>
+                        <p>
+                            Play Battleship on a 4x4 grid with UART communication between LaunchPads. Place ships and attack the opponent's grid. Hits and misses are visually indicated. When all ships are sunk, messages are sent via UART and AWS.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="section-separator">
-            <h1 class="section-title">Games Implemented</h1>
-            <hr>
-        </div>
+        <div class="section-demo-video">
+            <div class="cards-container">
+                <div class="section-separator">
+                    <h1 class="section-title">Demo Video</h1>
+                    <hr>
+                </div>
 
-        <div class="card">
-            <div class="card-image"></div>
-            <div class="card-content">
-                <h2>Tic Tac Toe</h2>
-                <p>
-                    Play Tic Tac Toe with two players. Use the remote control to select squares on the grid and place Xs or Os. The game determines the winner or a draw, and returns to the main menu page.
-                </p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XNJ58W31QO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image"></div>
-            <div class="card-content">
-                <h2>Number Memory</h2>
-                <p>
-                    Memorize and enter displayed numbers. A correct guess increases the score and adds another number to memorize. An incorrect guess ends the game and sends the score through AWS.
-                </p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image"></div>
-            <div class="card-content">
-                <h2>Word Memory</h2>
-                <p>
-                    Remember whether you have seen a word before. Keep score and lives. Use the SW3 and SW2 switches to indicate new and seen words. Once lives run out, the score is sent through AWS.
-                </p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image"></div>
-            <div class="card-content">
-                <h2>Battleship</h2>
-                <p>
-                    Play Battleship on a 4x4 grid with UART communication between LaunchPads. Place ships and attack the opponent's grid. Hits and misses are visually indicated. When all ships are sunk, messages are sent via UART and AWS.
-                </p>
-            </div>
-        </div>
-
-        <div class="section-separator">
-            <h1 class="section-title">Demo Video</h1>
-            <hr>
-        </div>
-
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/XNJ58W31QO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 
