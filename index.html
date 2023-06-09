@@ -8,25 +8,13 @@
         }
 
         body {
-            font-family: 'Helvetica', Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
         }
 
         .main-container {
-            background-color: #FFFFFF;
-        }
-
-        .section-features {
-            background-color: #FFFFFF;
-        }
-
-        .section-games {
             background-color: #F5F5F7;
-        }
-
-        .section-demo-video {
-            background-color: #FFFFFF;
         }
 
         header {
@@ -60,7 +48,6 @@
         }
 
         .card-image {
-            background-image: url('stonks.png');
             background-size: cover;
             background-position: center;
             border-radius: 8px;
@@ -112,14 +99,26 @@
             padding: 20px;
             text-align: center;
         }
+
+        .section-features {
+            background-color: white;
+        }
+
+        .section-games {
+            background-color: #F5F5F7;
+        }
+
+        .section-video {
+            background-color: white;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>CC3200 Lab Project Demo</h1>
-    </header>
-
     <div class="main-container">
+        <header>
+            <h1>CC3200 Lab Project Demo</h1>
+        </header>
+
         <div class="section-features">
             <div class="cards-container">
                 <div class="section-separator">
@@ -128,7 +127,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-image"></div>
+                    <div class="card-image" style="background-image: url('login.png');"></div>
                     <div class="card-content">
                         <h2>Login</h2>
                         <p>
@@ -138,7 +137,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-image"></div>
+                    <div class="card-image" style="background-image: url('welcome.png');"></div>
                     <div class="card-content">
                         <h2>Main Menu</h2>
                         <p>
@@ -157,7 +156,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-image"></div>
+                    <div class="card-image" style="background-image: url('ttt.png');"></div>
                     <div class="card-content">
                         <h2>Tic Tac Toe</h2>
                         <p>
@@ -167,7 +166,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-image"></div>
+                    <div class="card-image" style="background-image: url('nm.png');"></div>
                     <div class="card-content">
                         <h2>Number Memory</h2>
                         <p>
@@ -177,7 +176,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-image"></div>
+                    <div class="card-image" style="background-image: url('wm.png');"></div>
                     <div class="card-content">
                         <h2>Word Memory</h2>
                         <p>
@@ -187,7 +186,7 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-image"></div>
+                    <div class="card-image" style="background-image: url('battle_ship.png');"></div>
                     <div class="card-content">
                         <h2>Battleship</h2>
                         <p>
@@ -198,7 +197,7 @@
             </div>
         </div>
 
-        <div class="section-demo-video">
+        <div class="section-video">
             <div class="cards-container">
                 <div class="section-separator">
                     <h1 class="section-title">Demo Video</h1>
@@ -206,14 +205,14 @@
                 </div>
 
                 <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XNJ58W31QO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/c9iZJ4FKeo0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <p>CC3200 Lab Project Demo &copy; 2023</p>
-    </footer>
+        <footer>
+            <p>CC3200 Lab Project Demo &copy; 2023</p>
+        </footer>
+    </div>
 </body>
 </html>
